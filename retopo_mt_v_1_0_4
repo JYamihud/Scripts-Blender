@@ -2970,8 +2970,8 @@ class RetopoMT(bpy.types.Operator):
             global g_SavPersp
             g_SavPersp = bpy.context.space_data.region_3d.is_perspective
             if(bpy.context.space_data.region_3d.is_perspective == False):
-                global g_SavLens
-                g_SavLens = bpy.context.space_data.lens
+                
+                globals()["g_SavLens"] = bpy.context.space_data.lens
 
 #                bpy.context.space_data.lens = 250.0
 
